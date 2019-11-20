@@ -1,0 +1,10 @@
+<h1>Hospitals</h1>
+<hr />
+<h2><%= @hospitals.length <= 0 ? "No Hospitals" : nil %></h2> 
+<ul>
+  <% @hospitals.each do |hospital| %>
+    <li>
+      <h2><%= link_to hospital.name, hospital_path(hospital) %></h2>
+    </li>
+  <% end %>
+</ul>
